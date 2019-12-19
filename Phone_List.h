@@ -136,14 +136,20 @@ public:
 		else//打开成功
 		{
 			string temp;
-			getline(fin, temp);
+			//getline(fin, temp);
 
-			while (!fin.eof())//循环建树
+			//while (!fin.eof())//循环建树
+			while(1)
 			{
+				getline(fin, temp);
+				if (temp[0]==',')
+				{
+					break;
+				}
 				node* newMember = new node;
 
 				//用输入参数构建节点
-				getline(fin, temp);
+				//getline(fin, temp);
 				char* token;
 				char s[2] = ",";
 				string information[12];
